@@ -14,16 +14,12 @@ import javax.servlet.MultipartConfigElement;
 @SpringBootApplication
 @EnableTransactionManagement
 @EnableScheduling
-//@MapperScan("com.example.mapper")
-//@ImportResource(locations={"classpath:applicationContext.xml"})
 //@ActiveProfiles("test")
 public class Application {
 	
 	protected static Logger logger=LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) {
-		//SpringApplication.run(Application.class, args);
-
         SpringApplicationBuilder application = new SpringApplicationBuilder();
                /*
                 * Banner.Mode.OFF:关闭;
@@ -31,9 +27,7 @@ public class Application {
                 * Banner.Mode.LOG:日志输出方式;
                 */
         application.sources(Application.class)
-                //.child(SonCongfig.class)
                 .run(args);
 		logger.info("SpringBoot Start Success");
-		logger.debug("测试输出DEBUG日志！");
 	}
 }

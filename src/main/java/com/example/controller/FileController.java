@@ -78,22 +78,25 @@ public class FileController {
      * @throws IOException
      */
     @RequestMapping("/downloadfile")
-    @ResponseBody
     public Map<String,Object> download(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
         Map<String, Object> jsonMap = new HashMap<String, Object>();
         String filename = request.getParameter("filename");
         System.out.println("进入下载文件的方法");
-        response.setContentType("application/x-msdownload;charset=utf-8");
+        //response.setContentType("application/x-msdownload;charset=utf-8");
         request.setCharacterEncoding("UTF-8");
         BufferedInputStream bis = null;
         BufferedOutputStream bos = null;
+        //String scpath = "/data/guanqian-8080/"+"filemanager";
+
+        String scpath2 = this.getClass().getClassLoader().getResource("").getPath();
+        System.out.println(scpath2.toString());
         String scpath = request.getSession().getServletContext().getRealPath("/filemanager");
         File file = new File(scpath, new String(filename.getBytes("utf-8"), "utf-8"));
         FileInputStream fis = new FileInputStream(file);
         System.out.println(filename);
         try {
             long fileLength = file.length();
-            response.setContentType("application/x-msdownload;");
+            response.setContentType("application/x-msdownload;charset=utf-8");
             response.setHeader("Content-disposition", "attachment; filename=" + "testdownload.text");
             response.setHeader("Content-Length", String.valueOf(fileLength));
 

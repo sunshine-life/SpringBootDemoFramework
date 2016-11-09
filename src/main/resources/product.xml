@@ -1,0 +1,19 @@
+<producet>
+    <newblood>
+        <limitetotal>50</limitetotal>
+        <limitenum>4</limitenum>
+        <status>ON</status>
+    </newblood>
+
+    <current>
+        <limitetotal>50</limitetotal>
+        <limitenum>3</limitenum>
+        <status>ON</status>
+    </current>
+
+    <month>
+        <limitetotal>50</limitetotal>
+        <limitenum>2</limitenum>
+        <status>ON</status>
+    </month>
+</producet>

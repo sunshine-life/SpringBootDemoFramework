@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.TenderMapper">
+  <resultMap id="BaseResultMap" type="com.example.domain.Tender">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="investDays" jdbcType="INTEGER" property="investdays" />
+    <result column="view" jdbcType="VARCHAR" property="view" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    id, name, investDays, view, status
+  </sql>
+
+  <!-- 根据ID查询数据 -->
+  <select id="selectBycondition" resultType="com.example.domain.Tender">
+    SELECT
+    <include refid="Base_Column_List" />
+    FROM tender
+    WHERE status = 1
+  </select>
+</mapper>

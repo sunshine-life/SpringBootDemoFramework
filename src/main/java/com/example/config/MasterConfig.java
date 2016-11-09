@@ -25,11 +25,11 @@ public class MasterConfig {
         return DataSourceBuilder.create().build();
     }
 
-   /* @Primary
+    @Primary
     @Bean(name = "masterTransactionManager")
     public DataSourceTransactionManager transactionManager(@Qualifier("masterDataSource") DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
-    }*/
+    }
     @Primary
     @Bean(name = "masterSqlSessionFactory")
     public SqlSessionFactory sqlSessionFactory(@Qualifier("masterDataSource") DataSource dataSource) throws Exception {

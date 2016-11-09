@@ -77,7 +77,7 @@ public class BatchFileUploadController {
      * @return
      * @throws IOException
      */
-    @RequestMapping("/downloadfile")
+    @RequestMapping("/showfile")
     @ResponseBody
     public Map<String,Object> download(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
         Map<String, Object> jsonMap = new HashMap<String, Object>();
@@ -114,10 +114,12 @@ public class BatchFileUploadController {
         return jsonMap;
     }
 
-  /*  public static void main(String[] args) {
+    public static void main(String[] args) {
         String uploadPath=BatchFileUploadController.class.getResource("/").getAuthority().toString()+"filemanager";
         System.out.println(uploadPath);
         String uploadPath2=BatchFileUploadController.class.getResource("/").getPath().toString()+"filemanager";
         System.out.println(uploadPath2);
-    }*/
+        String uploadPath3=BatchFileUploadController.class.getResource("/").getAuthority().toString();
+        System.out.println(uploadPath3);
+    }
 }
