@@ -1,11 +1,8 @@
 package com.example.mongo.dao.Impl;
 
 import com.example.mongo.dao.BaseDao;
-import com.example.mongo.dao.DemoInfoRepository;
 import com.example.mongo.dao.FileDao;
-import com.example.mongo.model.DemoInfo;
-import com.mongodb.*;
-import com.mongodb.client.MongoDatabase;
+import com.mongodb.DB;
 import com.mongodb.gridfs.GridFS;
 import com.mongodb.gridfs.GridFSDBFile;
 import com.mongodb.gridfs.GridFSInputFile;
@@ -13,9 +10,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 /**
  * Created by life on 16-9-26.

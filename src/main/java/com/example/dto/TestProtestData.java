@@ -48,7 +48,7 @@ public class TestProtestData {
         System.out.println(start);
         Date end = new Date();
         System.out.println(end);
-        TestProtestData  test =  new TestProtestData(start,end);
+        TestProtestData test =  new TestProtestData(start,end);
         System.out.println(test.toString());
         end.setYear(78);
         System.out.println("=====================");

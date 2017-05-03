@@ -3,8 +3,6 @@ package com.example.utils;
 /**
  * Created by life on 16-10-13.
  */
-import java.io.IOException;
-import java.sql.Connection;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -14,6 +12,9 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+
+import java.io.IOException;
+import java.sql.Connection;
 
 public class httpGet {
 

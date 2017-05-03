@@ -3,11 +3,8 @@ package com.example.utils;
 /**
  * Created by life on 16-10-13.
  */
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+import java.sql.*;
 
 public class crawler {
 

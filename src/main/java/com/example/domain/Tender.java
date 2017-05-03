@@ -1,6 +1,10 @@
 package com.example.domain;
 
-import javax.persistence.*;
+import org.mongodb.morphia.annotations.Id;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 public class Tender {
     @Id

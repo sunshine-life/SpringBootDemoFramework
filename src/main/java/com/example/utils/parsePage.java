@@ -3,12 +3,6 @@ package com.example.utils;
 /**
  * Created by life on 16-10-13.
  */
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
 import org.htmlparser.Node;
 import org.htmlparser.Parser;
 import org.htmlparser.filters.HasAttributeFilter;
@@ -17,6 +11,7 @@ import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 
 import java.net.URLDecoder;
+import java.sql.*;
 
 public class parsePage {
 

@@ -1,13 +1,14 @@
 package com.example.redis;
 
-import java.io.Serializable;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
 /**
  * redicache 工具类
  */
